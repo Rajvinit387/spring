@@ -1,0 +1,60 @@
+package com.example.onetoone.entities;
+
+import java.util.List;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class category {
+	
+	
+	@Id
+	private String cidString;
+	
+	
+	private String titleString;
+	
+	
+	
+	
+	private List<product> products;
+
+
+	public category(String cidString, String titleString) {
+		super();
+		this.cidString = cidString;
+		this.titleString = titleString;
+	}
+
+
+	public category() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public String getCidString() {
+		return cidString;
+	}
+
+
+	public void setCidString(String cidString) {
+		this.cidString = cidString;
+	}
+
+
+	public String getTitleString() {
+		return titleString;
+	}
+
+
+	public void setTitleString(String titleString) {
+		this.titleString = titleString;
+	}
+
+	
+	
+	
+	
+}

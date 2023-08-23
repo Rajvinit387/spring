@@ -1,0 +1,34 @@
+package com.example.jsonimg.controller;
+
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.InputStreamResource;
+import org.springframework.core.io.Resource;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.jsonimg.service.service;
+
+@RestController
+public class usergcontroller {
+	
+	@Autowired
+	private service service;
+
+	@RequestMapping("/excel")
+	public ResponseEntity<Resource> download() throws IOException
+	{
+		String filenameString="users.xlsx";
+	ByteArrayInputStream actualdatArrayInputStream=	service.getactualdata();
+	InputStreamResource fileInputStreamResource = new InputStreamResource(actualdatArrayInputStream);
+	ResponseEntity<Resource> bodyEntity= ResponseEntity.ok().header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename"+ filenameString)
+			.contentType(MediaType.parseMediaType("application/vnd.ms-excel"))
+			.body(fileInputStreamResource);
+	  return bodyEntity;
+	}
+}

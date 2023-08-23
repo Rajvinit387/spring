@@ -1,0 +1,29 @@
+package com.example.jsonimg.controller;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.jsonimg.model.User;
+
+@RestController
+@RequestMapping("/users")
+public class mycontroller {
+	
+	
+	private Logger logger= LoggerFactory.getLogger(mycontroller.class);
+	
+	@PostMapping
+	public ResponseEntity<?> adduserinfo(@RequestBody User user)
+	{
+		
+		this.logger.info("add user request");
+		this.logger.info("user {}", user);
+		return ResponseEntity.ok("done");
+	}
+
+}

@@ -1,0 +1,13 @@
+package com.example.jsonimg;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class JsonimgApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(JsonimgApplication.class, args);
+	}
+
+}

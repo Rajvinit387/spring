@@ -1,0 +1,54 @@
+package com.example.onetoone;
+
+import org.apache.catalina.authenticator.SavedRequest;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+
+import com.example.onetoone.dao.Studentrepository;
+import com.example.onetoone.entities.Laptop;
+import com.example.onetoone.entities.Student;
+
+@SpringBootApplication
+public class OnetooneApplication implements CommandLineRunner {
+	
+	
+	@Autowired
+	private  Studentrepository studentrepository;
+	
+	private Logger logger=LoggerFactory.getLogger(OnetooneApplication.class);
+
+	public static void main(String[] args) {
+		SpringApplication.run(OnetooneApplication.class, args);
+		
+		
+	      
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		Student student= new Student();
+		student.setStudentid(14);
+		student.setStudentnameString("aditi");
+		student.setAboutString("i am very cute");
+		Laptop laptop= new Laptop();
+		laptop.setBrandnoString("apple");
+		laptop.setModelString("macbook air");
+		laptop.setLaptop_id(34);
+		laptop.setStudent(student);
+		student.setLaptop(laptop);
+		
+	 Student saveStudent=   studentrepository.save(student);
+	 logger.info("saved student is {}", student.getStudentnameString());
+	 
+	 
+	 
+		
+		
+	}
+
+}

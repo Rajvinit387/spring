@@ -1,0 +1,24 @@
+package com.example.demo1.validate;
+
+import jakarta.validation.ConstraintValidator;
+import jakarta.validation.ConstraintValidatorContext;
+
+public class NameValidator implements ConstraintValidator<namevalid, String> {
+	
+	
+	public boolean isValid(String value, ConstraintValidatorContext context)
+	{
+		if(value.isBlank())
+		
+		
+		
+		
+		return false;
+		
+		else {
+			return true;
+		}
+	}
+	
+
+}

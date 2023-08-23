@@ -1,0 +1,23 @@
+package com.example.onetoone.entities;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
+
+
+@Entity
+public class Laptop {
+	
+	@Id
+	private  int laptop_id;
+	
+	private String brandnoString;
+	
+	private String modelString;
+	
+	@OneToOne
+	@JoinColumn(name="Student_id")
+	private Student student;
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move package &apos;com.example.emaildemo.service&apos; to &apos;SMARTCONTACTMANAGER/src/main/java/com.example.smartcontactmanager&apos;&#x0D;&#x0A;- Original project: &apos;emaildemo-1&apos;&#x0D;&#x0A;- Destination element: &apos;SMARTCONTACTMANAGER/src/main/java/com.example.smartcontactmanager&apos;&#x0D;&#x0A;- Original element: &apos;emaildemo-1/src/main/java/com.example.emaildemo.service&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move package" destination="=SMARTCONTACTMANAGER/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.smartcontactmanager" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.emaildemo.service" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1691231201050" version="1.0"/>
+</session>

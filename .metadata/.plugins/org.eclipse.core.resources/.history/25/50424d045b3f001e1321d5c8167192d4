@@ -1,0 +1,42 @@
+package com.example.securitynew.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.http.FormLoginBeanDefinitionParser;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.web.SecurityFilterChain;
+
+@Configuration
+public class securityconfig   {
+	
+	
+	
+	@Bean
+	public UserDetailsService userDetailsService()
+	{
+		UserDetails userDetails=User
+				.withUsername("vinit").password("vinit")
+				.roles("ROLE_NORMAL")
+				.build();
+	}
+	
+	
+	@SuppressWarnings("deprecation")
+	@Bean
+	public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception
+	{
+		httpSecurity.csrf().disable().
+		authorizeHttpRequests()
+            .requestMatchers("/home/publicuser")
+            .permitAll().anyRequest()
+           .authenticated().and().formLogin();
+		
+		
+		return httpSecurity.build();
+		
+	}
+
+}

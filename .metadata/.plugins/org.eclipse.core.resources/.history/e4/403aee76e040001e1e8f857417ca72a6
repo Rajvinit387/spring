@@ -1,0 +1,5 @@
+package com.example.jwtnew.controller;
+
+public class AuthController {
+
+}

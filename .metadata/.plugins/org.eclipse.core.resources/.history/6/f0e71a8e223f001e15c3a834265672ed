@@ -1,0 +1,40 @@
+package com.example.onetoone;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+
+import com.example.onetoone.dao.Studentrepository;
+import com.example.onetoone.entities.Student;
+
+@SpringBootApplication
+public class OnetooneApplication implements CommandLineRunner {
+	
+	
+	@Autowired
+	private  Studentrepository studentrepository;
+
+	public static void main(String[] args) {
+		SpringApplication.run(OnetooneApplication.class, args);
+		
+		
+	      
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		Student student= new Student();
+		student.setStudentid(12);
+		student.setStudentnameString("Vinit");
+		student.setAboutString("i am the baap of all chuslims");
+		
+	 Student saveStudent=   studentrepository.save(student);
+	 
+	 
+		
+		
+	}
+
+}

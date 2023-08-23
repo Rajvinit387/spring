@@ -1,0 +1,65 @@
+package com.example.onetoone.entities;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+
+
+
+@Entity
+public class product {
+	
+	
+	@Id
+	private String pidString;
+	
+	
+	private String pnameString;
+	
+	
+	
+	private List<category> categories= new ArrayList<>();
+
+
+	public product(String pidString, String pnameString) {
+		super();
+		this.pidString = pidString;
+		this.pnameString = pnameString;
+	}
+
+
+	public product() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public String getPidString() {
+		return pidString;
+	}
+
+
+	public void setPidString(String pidString) {
+		this.pidString = pidString;
+	}
+
+
+	public String getPnameString() {
+		return pnameString;
+	}
+
+
+	public void setPnameString(String pnameString) {
+		this.pnameString = pnameString;
+	}
+	
+	
+	
+	
+	
+	
+
+}

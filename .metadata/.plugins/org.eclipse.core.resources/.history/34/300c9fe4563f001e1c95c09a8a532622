@@ -1,0 +1,26 @@
+package com.example.securitynew.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.http.FormLoginBeanDefinitionParser;
+import org.springframework.security.web.SecurityFilterChain;
+
+@Configuration
+public class securityconfig   {
+	
+	
+	@Bean
+	@SuppressWarnings("depreciation")
+	public SecurityFilterChain filterChain(HttpSecurity httpSecurity)
+	{
+		httpSecurity.csrf().disable().
+		authorizeHttpRequests()
+            .requestMatchers("/home/publicuser")
+            .permitAll().and().
+            .formLogin();
+		
+		
+	}
+
+}

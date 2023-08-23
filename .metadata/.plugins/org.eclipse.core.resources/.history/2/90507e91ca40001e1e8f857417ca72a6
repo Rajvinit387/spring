@@ -1,0 +1,27 @@
+package com.example.jwtnew.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.jwtnew.service.userservice;
+
+@RestController
+
+public class mycontroller {
+	
+	
+	@Autowired
+	private userservice userservice;
+	
+	@GetMapping("/user")
+	public String protectedapi()
+	{
+		System.out.println("getting users");
+		this.userservice.getusers();
+		return "users";
+	}
+	
+	
+
+}

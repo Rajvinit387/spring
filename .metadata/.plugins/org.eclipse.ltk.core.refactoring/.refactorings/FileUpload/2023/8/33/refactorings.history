@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.example.FileUpload.payload.Fileresponse.java&apos; to &apos;FileResponse.java&apos;&#x0D;&#x0A;- Original project: &apos;FileUpload&apos;&#x0D;&#x0A;- Original element: &apos;com.example.FileUpload.payload.Fileresponse.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.example.FileUpload.payload.FileResponse.java&apos;" description="Rename compilation unit &apos;Fileresponse.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.FileUpload.payload{Fileresponse.java" name="FileResponse.java" references="false" stamp="1692207760115" version="1.0"/>
+</session>

@@ -1,0 +1,5 @@
+package com.example.multipledb.postgres.repository;
+
+public interface productrepo {
+
+}

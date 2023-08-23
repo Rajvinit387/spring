@@ -1,0 +1,31 @@
+package com.example.jwtnew.service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
+
+import org.springframework.stereotype.Service;
+
+import com.example.jwtnew.model.User;
+
+@Service
+public class userservice {
+	
+	
+private List<User> store = new ArrayList<>();
+
+public userservice() {
+
+	store.add(new User(UUID.randomUUID().toString(),"vinit","delhi"));
+	store.add(new User(UUID.randomUUID().toString(),"raj","mumbai"));
+	store.add(new User(UUID.randomUUID().toString(),"jsr","banglore"));
+	
+	
+	
+}
+	
+
+
+
+
+}

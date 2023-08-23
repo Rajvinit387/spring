@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<h1>we are learning spring</h1>
+	
+	
+	<h2 th:text="${currentdate}"></h2>
+	<h2 th:text="${ #strings.toUpperCase(name)}"></h2>
+	
+	<h2>sabka papa: <span th:text="${name}"></span></h2>
+	
+	<div th:with="a=5, b=67, n=${name}">
+	<h1> value of a is : <span th:text="${a}"></span></h1>
+	<h1> value of b is : <span th:text="${b}"></span></h1>
+	<h1> value of n is : <span th:text="${n}"></span></h1>
+	
+	<h1 th:text="'value of n is : '+${n}"></h1>
+	
+	</div>
+</body>
+</html>

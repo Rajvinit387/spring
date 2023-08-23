@@ -1,0 +1,5 @@
+package com.example.multipledb.mysql.config;
+
+public class mysqldbconfig {
+
+}

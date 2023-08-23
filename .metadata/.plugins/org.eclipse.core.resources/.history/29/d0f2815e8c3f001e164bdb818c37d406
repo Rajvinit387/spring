@@ -1,0 +1,5 @@
+package com.example.jsonimg.repo;
+
+public interface userrepo {
+
+}

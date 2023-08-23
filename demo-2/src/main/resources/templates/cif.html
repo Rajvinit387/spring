@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<h1> dsdsbdsjbdfs</h1>
+	<h1 > USER IS <span  th:style="${activestatus} ? 'color:green;font-weight:bold' : 'color:red;font-weight:bold' " th:text="${activestatus} ? 'ACTIVE' : 'NOT ACTIVE' "></h1>
+	
+	<h1 th:if="${gender}=='M'"> male</h1>
+	<h1 th:unless="${gender}=='M'"> Female</h1>
+	
+	
+	<div th:switch="${#lists.size(ints)}">
+	<h1 th:case="'1'"> list contain 1 elemnet</h1>
+	<h1 th:case="'2'"> list contain 2 elemnet</h1>
+	<h1 th:case="*"> list contain more elemnet</h1> </div>
+</body>
+</html>

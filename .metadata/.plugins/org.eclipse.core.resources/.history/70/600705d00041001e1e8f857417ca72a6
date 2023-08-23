@@ -1,0 +1,5 @@
+package com.example.jwtnew.repo;
+
+public interface userrepo {
+
+}
